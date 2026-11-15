@@ -1,0 +1,13 @@
+### 4. Política de contraseñas del dominio
+$ samba-tool domain passwordsettings show
+Password information for domain 'DC=cerberos,DC=lab'
+
+Password complexity: off
+Store plaintext passwords: off
+Password history length: 5
+Minimum password length: 12
+Minimum password age (days): 0
+Maximum password age (days): 0
+Account lockout duration (mins): 15
+Account lockout threshold (attempts): 5
+Reset account lockout after (mins): 15

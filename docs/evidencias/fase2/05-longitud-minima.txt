@@ -1,0 +1,8 @@
+### 5. Longitud mínima: se rechaza una contraseña de 11 caracteres
+$ ldapmodify -H ldaps://127.0.0.1:1636 -D prueba.politica@cerberos.lab -w ********   # unicodePwd: <11 caracteres>
+ldap_modify: Constraint violation (19)
+	additional info: 0000052D: Constraint violation - check_password_restrictions: the password is too short. It should be equal or longer than 12 characters!
+modifying entry "CN=prueba.politica,OU=SERVICIOS,OU=CERBEROS,DC=cerberos,DC=lab"
+
+$ ldapmodify -H ldaps://127.0.0.1:1636 -D prueba.politica@cerberos.lab -w ********   # unicodePwd: <12 caracteres>
+modifying entry "CN=prueba.politica,OU=SERVICIOS,OU=CERBEROS,DC=cerberos,DC=lab"

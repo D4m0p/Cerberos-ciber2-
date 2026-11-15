@@ -1,0 +1,41 @@
+### 2. Grupos GRP_* y sus miembros
+$ ldapsearch ... -b "OU=CERBEROS,DC=cerberos,DC=lab" "(objectClass=group)" cn member
+dn: CN=GRP_FIN_JEFE_AREA,OU=FINANZAS,OU=CERBEROS,DC=cerberos,DC=lab
+cn: GRP_FIN_JEFE_AREA
+member: CN=Carlos Mendoza,OU=FINANZAS,OU=CERBEROS,DC=cerberos,DC=lab
+
+dn: CN=GRP_TI_TECNICO,OU=TI,OU=CERBEROS,DC=cerberos,DC=lab
+cn: GRP_TI_TECNICO
+member: CN=Luis Castillo,OU=TI,OU=CERBEROS,DC=cerberos,DC=lab
+
+dn: CN=GRP_TI_SUPERVISOR,OU=TI,OU=CERBEROS,DC=cerberos,DC=lab
+cn: GRP_TI_SUPERVISOR
+member: CN=Ana Rodriguez,OU=TI,OU=CERBEROS,DC=cerberos,DC=lab
+
+dn: CN=GRP_AUD_AUDITOR,OU=AUDITORIA,OU=CERBEROS,DC=cerberos,DC=lab
+cn: GRP_AUD_AUDITOR
+member: CN=Elena Vargas,OU=AUDITORIA,OU=CERBEROS,DC=cerberos,DC=lab
+
+dn: CN=GRP_FIN_EMPLEADO,OU=FINANZAS,OU=CERBEROS,DC=cerberos,DC=lab
+cn: GRP_FIN_EMPLEADO
+member: CN=Carlos Mendoza,OU=FINANZAS,OU=CERBEROS,DC=cerberos,DC=lab
+member: CN=Sofia Herrera,OU=FINANZAS,OU=CERBEROS,DC=cerberos,DC=lab
+member: CN=Juan Perez,OU=FINANZAS,OU=CERBEROS,DC=cerberos,DC=lab
+
+dn: CN=GRP_RRHH_JEFE_AREA,OU=RRHH,OU=CERBEROS,DC=cerberos,DC=lab
+cn: GRP_RRHH_JEFE_AREA
+member: CN=Laura Quintero,OU=RRHH,OU=CERBEROS,DC=cerberos,DC=lab
+
+dn: CN=GRP_EXT_INVITADO,OU=EXTERNOS,OU=CERBEROS,DC=cerberos,DC=lab
+cn: GRP_EXT_INVITADO
+member: CN=Pedro Batista,OU=EXTERNOS,OU=CERBEROS,DC=cerberos,DC=lab
+
+dn: CN=GRP_RRHH_EMPLEADO,OU=RRHH,OU=CERBEROS,DC=cerberos,DC=lab
+cn: GRP_RRHH_EMPLEADO
+member: CN=Juan Perez,OU=RRHH,OU=CERBEROS,DC=cerberos,DC=lab
+member: CN=Laura Quintero,OU=RRHH,OU=CERBEROS,DC=cerberos,DC=lab
+
+dn: CN=GRP_TI_ADMIN,OU=TI,OU=CERBEROS,DC=cerberos,DC=lab
+cn: GRP_TI_ADMIN
+member: CN=Maria Gonzalez,OU=TI,OU=CERBEROS,DC=cerberos,DC=lab
+

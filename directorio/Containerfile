@@ -1,0 +1,21 @@
+# Samba AD DC para el laboratorio Cerberos (dominio cerberos.lab)
+FROM docker.io/library/ubuntu:24.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends \
+      samba samba-ad-dc samba-ad-provision winbind krb5-user ldb-tools ldap-utils acl attr ca-certificates python3-setproctitle \
+ && rm -rf /var/lib/apt/lists/* \
+ && rm -f /etc/samba/smb.conf \
+ # Contenedor sin root: solo hay 65 536 identificadores disponibles, así que el
+ # rango de idmap de Samba (3 000 000+) se baja a uno que sí existe.
+ && sed -i -e 's/^lowerBound: .*/lowerBound: 30000/' -e 's/^upperBound: .*/upperBound: 60000/' \
+      /usr/share/samba/setup/idmap_init.ldif
+
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+RUN chmod 755 /usr/local/bin/entrypoint.sh
+
+# 389 LDAP, 636 LDAPS, 88 Kerberos, 53 DNS (solo dentro de la red cerberos-net)
+EXPOSE 389 636 88 53
+
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]

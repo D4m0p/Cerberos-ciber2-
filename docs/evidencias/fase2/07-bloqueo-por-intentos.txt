@@ -1,0 +1,20 @@
+### 7. Bloqueo tras 5 intentos fallidos
+$ intento 1 con contraseña incorrecta
+ldap_bind: Invalid credentials (49)
+$ intento 2 con contraseña incorrecta
+ldap_bind: Invalid credentials (49)
+$ intento 3 con contraseña incorrecta
+ldap_bind: Invalid credentials (49)
+$ intento 4 con contraseña incorrecta
+ldap_bind: Invalid credentials (49)
+$ intento 5 con contraseña incorrecta
+ldap_bind: Invalid credentials (49)
+
+$ intento 6 con la contraseña CORRECTA (la cuenta ya está bloqueada)
+ldap_bind: Invalid credentials (49)
+	additional info: 80090308: LdapErr: DSID-0C0903A9, comment: AcceptSecurityContext error, data 775, v1db1
+
+$ atributos de bloqueo vistos por el administrador
+dn: CN=prueba.politica,OU=SERVICIOS,OU=CERBEROS,DC=cerberos,DC=lab
+badPwdCount: 5
+lockoutTime: 134392399400497540

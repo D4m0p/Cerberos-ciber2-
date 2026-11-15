@@ -1,0 +1,14 @@
+# Secretos: nunca al repositorio (guía, sección 7.2)
+.env
+*.env
+!.env.example
+directorio/secretos/
+*.key
+*.pem
+# Python
+__pycache__/
+*.pyc
+.venv/
+# Editores y sistema
+.~lock.*
+.DS_Store

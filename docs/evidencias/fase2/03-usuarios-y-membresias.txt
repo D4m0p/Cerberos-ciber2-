@@ -1,0 +1,67 @@
+### 3. Usuarios: área (department) y grupos (memberOf)
+$ ldapsearch ... -b "OU=CERBEROS,DC=cerberos,DC=lab" "(objectClass=user)" sAMAccountName department title memberOf
+dn: CN=Maria Gonzalez,OU=TI,OU=CERBEROS,DC=cerberos,DC=lab
+title: Administradora de sistemas
+department: TI
+sAMAccountName: gonzalez.maria
+memberOf: CN=GRP_TI_ADMIN,OU=TI,OU=CERBEROS,DC=cerberos,DC=lab
+
+dn: CN=Juan Perez,OU=RRHH,OU=CERBEROS,DC=cerberos,DC=lab
+title: Analista de planilla
+department: RRHH
+sAMAccountName: perez.juan2
+memberOf: CN=GRP_RRHH_EMPLEADO,OU=RRHH,OU=CERBEROS,DC=cerberos,DC=lab
+
+dn: CN=Carlos Mendoza,OU=FINANZAS,OU=CERBEROS,DC=cerberos,DC=lab
+title: Jefe de Finanzas
+department: FINANZAS
+sAMAccountName: mendoza.carlos
+memberOf: CN=GRP_FIN_JEFE_AREA,OU=FINANZAS,OU=CERBEROS,DC=cerberos,DC=lab
+memberOf: CN=GRP_FIN_EMPLEADO,OU=FINANZAS,OU=CERBEROS,DC=cerberos,DC=lab
+
+dn: CN=Sofia Herrera,OU=FINANZAS,OU=CERBEROS,DC=cerberos,DC=lab
+title: Asistente de tesoreria
+department: FINANZAS
+sAMAccountName: herrera.sofia
+memberOf: CN=GRP_FIN_EMPLEADO,OU=FINANZAS,OU=CERBEROS,DC=cerberos,DC=lab
+
+dn: CN=Laura Quintero,OU=RRHH,OU=CERBEROS,DC=cerberos,DC=lab
+title: Jefa de Recursos Humanos
+department: RRHH
+sAMAccountName: quintero.laura
+memberOf: CN=GRP_RRHH_JEFE_AREA,OU=RRHH,OU=CERBEROS,DC=cerberos,DC=lab
+memberOf: CN=GRP_RRHH_EMPLEADO,OU=RRHH,OU=CERBEROS,DC=cerberos,DC=lab
+
+dn: CN=svc-cerberos-ldap,OU=SERVICIOS,OU=CERBEROS,DC=cerberos,DC=lab
+sAMAccountName: svc-cerberos-ldap
+
+dn: CN=Elena Vargas,OU=AUDITORIA,OU=CERBEROS,DC=cerberos,DC=lab
+title: Auditora interna
+department: AUDITORIA
+sAMAccountName: vargas.elena
+memberOf: CN=GRP_AUD_AUDITOR,OU=AUDITORIA,OU=CERBEROS,DC=cerberos,DC=lab
+
+dn: CN=Luis Castillo,OU=TI,OU=CERBEROS,DC=cerberos,DC=lab
+title: Tecnico de soporte
+department: TI
+sAMAccountName: castillo.luis
+memberOf: CN=GRP_TI_TECNICO,OU=TI,OU=CERBEROS,DC=cerberos,DC=lab
+
+dn: CN=Juan Perez,OU=FINANZAS,OU=CERBEROS,DC=cerberos,DC=lab
+title: Analista contable
+department: FINANZAS
+sAMAccountName: perez.juan
+memberOf: CN=GRP_FIN_EMPLEADO,OU=FINANZAS,OU=CERBEROS,DC=cerberos,DC=lab
+
+dn: CN=Pedro Batista,OU=EXTERNOS,OU=CERBEROS,DC=cerberos,DC=lab
+title: Consultor externo
+department: EXTERNOS
+sAMAccountName: batista.pedro
+memberOf: CN=GRP_EXT_INVITADO,OU=EXTERNOS,OU=CERBEROS,DC=cerberos,DC=lab
+
+dn: CN=Ana Rodriguez,OU=TI,OU=CERBEROS,DC=cerberos,DC=lab
+title: Supervisora de mesa de ayuda
+department: TI
+sAMAccountName: rodriguez.ana
+memberOf: CN=GRP_TI_SUPERVISOR,OU=TI,OU=CERBEROS,DC=cerberos,DC=lab
+

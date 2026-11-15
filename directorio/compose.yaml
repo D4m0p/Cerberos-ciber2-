@@ -1,0 +1,37 @@
+# Directorio de Cerberos: Samba AD DC (dominio cerberos.lab)
+# Uso:  podman compose --env-file .env up -d --build
+name: cerberos
+
+services:
+  dc1:
+    build:
+      context: .
+      dockerfile: Containerfile
+    image: localhost/cerberos-samba-dc:latest
+    container_name: cerberos-dc1
+    hostname: dc1
+    domainname: cerberos.lab
+    environment:
+      SAMBA_REALM: ${SAMBA_REALM}
+      SAMBA_DOMAIN: ${SAMBA_DOMAIN}
+      SAMBA_ADMIN_PASSWORD: ${SAMBA_ADMIN_PASSWORD}
+      SAMBA_PROVISION_EXTRA: ${SAMBA_PROVISION_EXTRA:-}
+    volumes:
+      - samba-etc:/etc/samba
+      - samba-lib:/var/lib/samba
+    networks:
+      cerberos-net:
+        aliases:
+          - dc1.cerberos.lab
+    ports:
+      # LDAPS solo en la interfaz local; Keycloak lo alcanzará por cerberos-net.
+      - "127.0.0.1:1636:636"
+    restart: unless-stopped
+
+volumes:
+  samba-etc:
+  samba-lib:
+
+networks:
+  cerberos-net:
+    name: cerberos-net
