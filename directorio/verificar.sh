@@ -12,14 +12,14 @@ set -a; . ./.env; set +a
 export LDAPTLS_REQCERT=never   # certificado autofirmado de laboratorio; en la Fase 3 se reemplaza
 
 st()  { podman exec "$DC" samba-tool "$@" 2> >(grep -v 'passwords on command line' >&2); }
-svc() { ldapsearch -LLL -o ldif-wrap=no -H "$URI" -D "svc-cerberos-ldap@cerberos.lab" -w "$SVC_LDAP_PASSWORD" "$@"; }
+svc() { ldapsearch -LLL -o ldif-wrap=no -H "$URI" -D "svc-cerberos-ldapbind@cerberos.lab" -w "$SVC_LDAP_PASSWORD" "$@"; }
 adm() { ldapsearch -LLL -o ldif-wrap=no -H "$URI" -D "Administrator@cerberos.lab" -w "$SAMBA_ADMIN_PASSWORD" "$@"; }
 clave() { python3 -c "import secrets; print(secrets.token_urlsafe($1)[:$1])"; }
 mkdir -p "$EVID"
 
 {
-echo "### 1. Unidades organizativas (bind LDAPS con svc-cerberos-ldap)"
-echo "\$ ldapsearch -H $URI -D svc-cerberos-ldap@cerberos.lab -w ******** -b \"$BASE\" \"(objectClass=organizationalUnit)\" dn"
+echo "### 1. Unidades organizativas (bind LDAPS con svc-cerberos-ldapbind)"
+echo "\$ ldapsearch -H $URI -D svc-cerberos-ldapbind@cerberos.lab -w ******** -b \"$BASE\" \"(objectClass=organizationalUnit)\" dn"
 svc -b "$BASE" "(objectClass=organizationalUnit)" dn | grep '^dn:'
 } > "$EVID/01-unidades-organizativas.txt" 2>&1
 

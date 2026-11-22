@@ -1,9 +1,9 @@
-### 1. Unidades organizativas (bind LDAPS con svc-cerberos-ldap)
-$ ldapsearch -H ldaps://127.0.0.1:1636 -D svc-cerberos-ldap@cerberos.lab -w ******** -b "OU=CERBEROS,DC=cerberos,DC=lab" "(objectClass=organizationalUnit)" dn
-dn: OU=RRHH,OU=CERBEROS,DC=cerberos,DC=lab
+### 1. Unidades organizativas (bind LDAPS con svc-cerberos-ldapbind)
+$ ldapsearch -H ldaps://127.0.0.1:1636 -D svc-cerberos-ldapbind@cerberos.lab -w ******** -b "OU=CERBEROS,DC=cerberos,DC=lab" "(objectClass=organizationalUnit)" dn
+dn: OU=FIN,OU=CERBEROS,DC=cerberos,DC=lab
 dn: OU=SERVICIOS,OU=CERBEROS,DC=cerberos,DC=lab
 dn: OU=TI,OU=CERBEROS,DC=cerberos,DC=lab
-dn: OU=EXTERNOS,OU=CERBEROS,DC=cerberos,DC=lab
-dn: OU=FINANZAS,OU=CERBEROS,DC=cerberos,DC=lab
+dn: OU=RRHH,OU=CERBEROS,DC=cerberos,DC=lab
 dn: OU=CERBEROS,DC=cerberos,DC=lab
-dn: OU=AUDITORIA,OU=CERBEROS,DC=cerberos,DC=lab
+dn: OU=AUD,OU=CERBEROS,DC=cerberos,DC=lab
+dn: OU=GEN,OU=CERBEROS,DC=cerberos,DC=lab

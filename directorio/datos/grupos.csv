@@ -2,9 +2,9 @@ grupo,ou,rol,descripcion
 GRP_TI_ADMIN,TI,ROL_ADMIN,Administradores de Cerberos
 GRP_TI_TECNICO,TI,ROL_TECNICO,Tecnicos de soporte que atienden tickets
 GRP_TI_SUPERVISOR,TI,ROL_SUPERVISOR,Supervisores de la mesa de ayuda
-GRP_AUD_AUDITOR,AUDITORIA,ROL_AUDITOR,Auditores internos (solo lectura)
-GRP_FIN_JEFE_AREA,FINANZAS,ROL_JEFE_AREA,Jefatura de Finanzas (aprueba solicitudes de su area)
-GRP_FIN_EMPLEADO,FINANZAS,ROL_EMPLEADO,Empleados de Finanzas
 GRP_RRHH_JEFE_AREA,RRHH,ROL_JEFE_AREA,Jefatura de Recursos Humanos (aprueba solicitudes de su area)
 GRP_RRHH_EMPLEADO,RRHH,ROL_EMPLEADO,Empleados de Recursos Humanos
-GRP_EXT_INVITADO,EXTERNOS,ROL_INVITADO,Invitados externos (solo catalogo publico)
+GRP_FIN_JEFE_AREA,FIN,ROL_JEFE_AREA,Jefatura de Finanzas (aprueba solicitudes de su area)
+GRP_FIN_EMPLEADO,FIN,ROL_EMPLEADO,Empleados de Finanzas
+GRP_AUD_AUDITOR,AUD,ROL_AUDITOR,Auditores internos (solo lectura)
+GRP_GEN_INVITADO,GEN,ROL_INVITADO,Invitados (solo datos publicos)

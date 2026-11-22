@@ -17,4 +17,4 @@ ldap_bind: Invalid credentials (49)
 $ atributos de bloqueo vistos por el administrador
 dn: CN=prueba.politica,OU=SERVICIOS,OU=CERBEROS,DC=cerberos,DC=lab
 badPwdCount: 5
-lockoutTime: 134392399400497540
+lockoutTime: 134398550904770360

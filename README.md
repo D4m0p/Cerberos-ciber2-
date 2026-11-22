@@ -48,7 +48,7 @@ Consulta de ejemplo:
 
 ```bash
 LDAPTLS_REQCERT=never ldapsearch -H ldaps://127.0.0.1:1636 \
-  -D "svc-cerberos-ldap@cerberos.lab" -W \
+  -D "svc-cerberos-ldapbind@cerberos.lab" -W \
   -b "OU=CERBEROS,DC=cerberos,DC=lab" "(objectClass=group)" cn member
 ```
 

@@ -1,11 +1,10 @@
 usuario,nombre,apellido,ou,cargo,grupos
-gonzalez.maria,Maria,Gonzalez,TI,Administradora de sistemas,GRP_TI_ADMIN
-castillo.luis,Luis,Castillo,TI,Tecnico de soporte,GRP_TI_TECNICO
-rodriguez.ana,Ana,Rodriguez,TI,Supervisora de mesa de ayuda,GRP_TI_SUPERVISOR
-vargas.elena,Elena,Vargas,AUDITORIA,Auditora interna,GRP_AUD_AUDITOR
-mendoza.carlos,Carlos,Mendoza,FINANZAS,Jefe de Finanzas,GRP_FIN_JEFE_AREA;GRP_FIN_EMPLEADO
-perez.juan,Juan,Perez,FINANZAS,Analista contable,GRP_FIN_EMPLEADO
-herrera.sofia,Sofia,Herrera,FINANZAS,Asistente de tesoreria,GRP_FIN_EMPLEADO
-quintero.laura,Laura,Quintero,RRHH,Jefa de Recursos Humanos,GRP_RRHH_JEFE_AREA;GRP_RRHH_EMPLEADO
-perez.juan2,Juan,Perez,RRHH,Analista de planilla,GRP_RRHH_EMPLEADO
-batista.pedro,Pedro,Batista,EXTERNOS,Consultor externo,GRP_EXT_INVITADO
+navarro.iliana,Iliana,Navarro,TI,Administrador de Sistemas,GRP_TI_ADMIN
+sanchez.andrea,Andrea,Sanchez,TI,Tecnico de Soporte,GRP_TI_TECNICO
+licona.hanna,Hanna,Licona,TI,Supervisor de Soporte,GRP_TI_SUPERVISOR
+moreno.david,David,Moreno,RRHH,Gerente de Recursos Humanos,GRP_RRHH_JEFE_AREA
+rodriguez.carlos,Carlos,Rodriguez,FIN,Gerente Financiero,GRP_FIN_JEFE_AREA
+elisondro.erick,Erick,Elisondro,AUD,Auditor Interno,GRP_AUD_AUDITOR
+hernandez.isnayana,Isnayana,Hernandez,RRHH,Analista de RRHH,GRP_RRHH_EMPLEADO
+gonzalez.maria,Maria,Gonzalez,FIN,Contador Junior,GRP_FIN_EMPLEADO
+diaz.jorge,Jorge,Diaz,GEN,Invitado,GRP_GEN_INVITADO

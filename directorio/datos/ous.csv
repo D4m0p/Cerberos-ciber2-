@@ -1,8 +1,8 @@
 ou,descripcion
 CERBEROS,Raiz de los objetos del proyecto Cerberos
-TI,Area de Tecnologia de la Informacion (mesa de ayuda)
-AUDITORIA,Area de Auditoria interna
-FINANZAS,Area de Finanzas
-RRHH,Area de Recursos Humanos
-EXTERNOS,Personas externas con acceso de invitado
+TI,Tecnologia de la informacion (administracion y soporte)
+RRHH,Recursos humanos
+FIN,Contabilidad y finanzas
+AUD,Auditoria interna
+GEN,General (invitados sin area)
 SERVICIOS,Cuentas de servicio (sin inicio de sesion interactivo)

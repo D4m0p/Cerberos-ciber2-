@@ -58,13 +58,13 @@ tail -n +2 datos/usuarios.csv | while IFS=, read -r usuario nombre apellido ou c
 done
 
 echo "== Cuenta de servicio =="
-if existe_usuario svc-cerberos-ldap; then
-    echo "  ya existe  svc-cerberos-ldap"
+if existe_usuario svc-cerberos-ldapbind; then
+    echo "  ya existe  svc-cerberos-ldapbind"
 else
-    st user add svc-cerberos-ldap "$SVC_LDAP_PASSWORD" --userou="OU=SERVICIOS,$RAIZ" \
+    st user add svc-cerberos-ldapbind "$SVC_LDAP_PASSWORD" --userou="OU=SERVICIOS,$RAIZ" \
         --description="Cuenta de servicio: lectura del directorio para la federacion de Keycloak" >/dev/null
-    st user setexpiry svc-cerberos-ldap --noexpiry >/dev/null
-    echo "  creada     svc-cerberos-ldap  (sin grupos de rol, solo lectura)"
+    st user setexpiry svc-cerberos-ldapbind --noexpiry >/dev/null
+    echo "  creada     svc-cerberos-ldapbind  (sin grupos de rol, solo lectura)"
 fi
 
 echo "Listo. Contraseñas iniciales de los usuarios en $SECRETOS (no se sube al repositorio)."
